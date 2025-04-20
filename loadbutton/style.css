@@ -1,0 +1,67 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* root color - */
+:root{
+    --first-color:rgb(178,34,34);
+    --first-color-alt:rgb(139,0,0);
+    --body-color:rgb(245,245,245);
+    --text-color:hsl(231,12%,98%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background-color: var(--body-color);
+}
+
+.button-load{
+    border: none;
+    outline: none;
+    position: relative;
+    padding: 1.25rem 2.5rem;
+    background-color: var(--first-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Rubik';
+    border-radius: .5rem;
+    box-shadow: 0 0 30px rgb(139,0,0);
+    overflow: hidden;
+    cursor: wait;
+}
+
+.button-load::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background: repeating-linear-gradient(
+        60deg,
+        transparent,
+        transparent,
+        var(--first-color-alt) .75rem,
+        var(--first-color-alt) 1.5rem
+    );
+    animation: load 1s infinite linear;
+}
+
+.button-text{
+    position: relative;
+}
+
+@keyframes load {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-1.75rem);
+    }
+}

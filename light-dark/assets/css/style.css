@@ -1,0 +1,39 @@
+@media (prefers-color-scheme:light) {
+    body{
+        background-color: #fff;
+        color:#000;
+    }
+}
+
+@media (prefers-color-scheme:dark) {
+    body{
+        background-color: #121212;
+        color:#f5f5f5;
+    }
+}
+
+
+.title{
+    position: relative;
+    font-size: 1.8rem;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.title.fade{
+    opacity: 0;
+}
+
+
+/* scrollbar genel ayarları */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+/* scroollbar iç kısımı */
+::-webkit-scrollbar-thumb{
+    background: #888;
+    border-radius: 5px;
+}
